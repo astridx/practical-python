@@ -168,7 +168,7 @@ However, values *do* have an underlying type.
 
 ```python
 >>> a = 42
->>> b = 'Hello World'
+>>> b = 'Hallo Python'
 >>> type(a)
 <type 'int'>
 >>> type(b)

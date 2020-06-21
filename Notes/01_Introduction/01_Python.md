@@ -1,4 +1,4 @@
-[Contents](../Contents.md) \| [Next (1.2 A First Program)](02_Hello_world.md)
+[Contents](../Contents.md) \| [Next (1.2 Ein erstes Programm)](02_Hello_world.md)
 
 # 1.1 Python
 
@@ -43,8 +43,8 @@ bash $ python
 Python 3.8.1 (default, Feb 20 2020, 09:29:22)
 [Clang 10.0.0 (clang-1000.10.44.4)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
->>> print("hello world")
-hello world
+>>> print("Hallo Python")
+Hallo Python
 >>>
 ```
 
@@ -191,5 +191,5 @@ exercise work. For example:
 If you can't make this work, don't worry about it.  The rest of this course
 has nothing to do with parsing XML.
 
-[Contents](../Contents.md) \| [Next (1.2 A First Program)](02_Hello_world.md)
+[Contents](../Contents.md) \| [Next (1.2 Ein erstes Programm)](02_Hello_world.md)
 

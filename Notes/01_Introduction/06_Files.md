@@ -72,7 +72,7 @@ Write string data.
 
 ```python
 with open('outfile', 'wt') as out:
-    out.write('Hello World\n')
+    out.write('Hallo Python\n')
     ...
 ```
 
@@ -80,7 +80,7 @@ Redirect the print function.
 
 ```python
 with open('outfile', 'wt') as out:
-    print('Hello World', file=out)
+    print('Hallo Python', file=out)
     ...
 ```
 

@@ -1,6 +1,6 @@
 [Contents](../Contents.md) \| [Previous (1.1 Python)](01_Python.md) \| [Next (1.3 Numbers)](03_Numbers.md)
 
-# 1.2 A First Program
+# 1.2 Ein erstes Programm
 
 This section discusses the creation of your first program, running the
 interpreter, and some basic debugging.
@@ -14,29 +14,25 @@ from a command shell.
 
 ```bash
 python3
-Python 3.6.1 (v3.6.1:69c0db5050, Mar 21 2017, 01:21:04)
-[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Expert programmers usually have no problem using the interpreter in
-this way, but it's not so user-friendly for beginners.  You may be using
-an environment that provides a different interface to Python.  That's fine,
-but learning how to run Python terminal is still a useful skill to know.
+Erfahrene Programmierer haben normalerweise kein Problem damit, die Befehlszeile zu nutzen. Für Anfänger ist dies oft ein No-Go. Verwendest du eine Umgebung, die eine benutzerfreundlichere Schnittstelle zu Python bietet? Das ist in Ordnung. Trotzdem ist es sinnvoll, sich mit dem Terminal anzufreunden. So schließt du Probleme, die außerhalb von Python begründet sind, schnell aus. Ich lerne aus diesem Grund mit der Befehlszeile.
 
-### Interactive Mode
+### Interaktiver Modus{#interaktivermodus}
 
-When you start Python, you get an *interactive* mode where you can experiment.
+Wenn du Python aufrufst, öffnet sich der *interaktive* Modus, in dem du experimentierst.
 
-If you start typing statements, they will run immediately. There is no
-edit/compile/run/debug cycle.
+Wenn du eine Anweisung eingibst, wird diese sofort abgeschlossen. Es gibt keinen Kreislauf in der Form von bearbeiten/kompilieren/ausführen/debuggen oder in gewohntem Englisch: edit/compile/run/debug. Probiere es aus, es macht Spaß:
 
 ```python
->>> print('hello world')
-hello world
->>> 37*42
-1554
+>>> print('Hallo Python')
+Hallo Python
+>>> 37*2
+74
 >>> for i in range(5):
 ...     print(i)
 ...
@@ -47,15 +43,19 @@ hello world
 4
 >>>
 ```
+Dieser sogenannte [*Direkt-Modus oder REPL*](https://de.wikipedia.org/wiki/Direct_mode)^[https://de.wikipedia.org/wiki/Direct_mode] ist nützlich für das Debuggen und Experimentieren.
 
-This so-called *read-eval-print-loop* (or REPL) is very useful for debugging and exploration.
+> **Was ist REPL?**
+Der Begriff REPL ist eine Abkürzung für *Read, Evaluate, Print and Loop* oder *Lesen, Auswerten, Drucken und Wiederholen*. REPL ist eine interaktive Möglichkeit, mit dem Computer in Python zu kommunizieren. Damit dies funktioniert, führt der Computer vier Dinge aus:  
+- Lesen der Benutzereingaben oder des Python-Befehles.  
+- Bewerten des Codes, um herauszufinden, was gemeint ist.  
+- Ausdruck aller Ergebnisse damit du die Antwort siehst.  
+- Rückkehr zu Schritt 1 um das Gespräch mit dir fortzusetzten.  
 
-**STOP**: If you can't figure out how to interact with Python, stop what you're doing
-and figure out how to do it.  If you're using an IDE, it might be hidden behind a
-menu option or other window.  Many parts of this course assume that you can
-interact with the interpreter.
 
-Let's take a closer look at the elements of the REPL:
+**STOP**: Wenn du bisher Probleme hast, löse diese erst. Im Vorwort findest du Links Hilfsangeboten. Verwendest du eine [IDE](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)^[https://wiki.python.org/moin/IntegratedDevelopmentEnvironments]? Ich gehe hier davon aus, dass deine Installation korrekt ist und du vertraut mit ihr bist. 
+
+Schauen wir uns die Elemente der REPL genauer an:
 
 - `>>>` is the interpreter prompt for starting a new statement.
 - `...` is the interpreter prompt for continuing a statement. Enter a blank line to finish typing and run what you've entered.
@@ -83,7 +83,7 @@ Programs are put in `.py` files.
 
 ```python
 # hello.py
-print('hello world')
+print('Hallo Python')
 ```
 
 You can create these files with your favorite text editor.
@@ -95,7 +95,7 @@ For example, in command-line Unix:
 
 ```bash
 bash % python hello.py
-hello world
+Hallo Python
 bash %
 ```
 
@@ -103,10 +103,10 @@ Or from the Windows shell:
 
 ```
 C:\SomeFolder>hello.py
-hello world
+Hallo Python
 
 C:\SomeFolder>c:\python36\python hello.py
-hello world
+Hallo Python
 ```
 
 Note: On Windows, you may need to specify a full path to the Python interpreter such as `c:\python36\python`.
@@ -315,7 +315,7 @@ else:
 The `print` function produces a single line of text with the values passed.
 
 ```python
-print('Hello world!') # Prints the text 'Hello world!'
+print('Hallo Python!') # Prints the text 'Hallo Python!'
 ```
 
 You can use variables. The text printed will be the value of the variable, not the name.

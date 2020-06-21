@@ -1,0 +1,17 @@
+https://vijual.de/2019/03/11/artikel-mit-markdown-und-pandoc-schreiben/
+https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex#Pandoc_Markdown
+https://texblog.org/2012/08/29/changing-the-font-size-in-latex/
+https://pandoc.org/MANUAL.html
+https://stackoverflow.com/questions/20788464/pandoc-doesnt-text-wrap-code-blocks-when-converting-to-pdf
+
+https://stackoverflow.com/questions/58170081/is-there-a-way-in-pandoc-to-include-a-filename-on-top-of-code-blocks
+https://learnbyexample.github.io/tutorial/ebook-generation/customizing-pandoc/
+https://pypi.org/project/pandoc-codeblock-include/
+
+
+sudo apt-get install texlive texlive-lang-german
+
+
+
+
+pandoc --pdf-engine=xelatex --highlight-style mykate.theme -s $(cat book.txt) --number-sections -V lang=de-DE -V papersize=a4paper -V geometry:margin=3cm -V fontsize=12pt -V breakurl -V hyphens=URL -V colorlinks --bibliography bib.bib -o joomlaextension.pdf

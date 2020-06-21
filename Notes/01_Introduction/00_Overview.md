@@ -1,14 +1,11 @@
 [Contents](../Contents.md) \| [Next (2 Working With Data)](../02_Working_with_data/00_Overview.md)
 
-## 1. Introduction to Python
+## 1. Python stelllt sich vor
 
-The goal of this first section is to introduce some Python basics from
-the ground up.  Starting with nothing, you'll learn how to edit, run,
-and debug small programs. Ultimately, you'll write a short script that
-reads a CSV data file and performs a simple calculation.
+Das Ziel dieses ersten Abschnitts ist es, einige Python-Grundlagen von Grund auf anzusehen. Du lernst, wie du kleine Programme bearbeitest, ausführst und debuggst. Letztendlich schreibst du selbst ein kurzes Skript, das eine CSV-Datendatei liest und eine einfache Berechnung durchführt. Hört sich gut an, oder?
 
-* [1.1 Introducing Python](01_Python.md)
-* [1.2 A First Program](02_Hello_world.md)
+* [1.1 Python stelllt sich vor](01_Python.md)
+* [1.2 Ein erstes Programm](02_Hello_world.md)
 * [1.3 Numbers](03_Numbers.md)
 * [1.4 Strings](04_Strings.md)
 * [1.5 Lists](05_Lists.md)

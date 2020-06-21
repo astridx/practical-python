@@ -1,7 +1,6 @@
-# Course Setup and Overview
+# Orientierung Kursaufbau und Übersicht
 
-Welcome to Practical Python Programming!   This page has some important information
-about course setup and logistics.
+Willkommen! Diese Seite enthält einige wichtige Informationen über dieses Buch.
 
 ## Course Duration and Time Requirements
 
@@ -12,6 +11,15 @@ Most participants find the material to be quite challenging without
 peeking at solution code (see below).
 
 ## Setup and Python Installation
+
+https://www.python.org/downloads/
+
+https://askubuntu.com/questions/1086649/how-to-update-python-to-the-latest-version-on-ubuntu-18-04
+https://stackoverflow.com/questions/62496378/version-numbers-in-python
+https://askubuntu.com/questions/1252373/versioning-in-python
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install python3.8
+
 
 You need nothing more than a basic Python 3.6 installation or newer.
 There is no dependency on any particular operating system, editor,

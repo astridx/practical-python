@@ -66,7 +66,7 @@ Strings work like an array for accessing individual characters. You use an integ
 Negative indices specify a position relative to the end of the string.
 
 ```python
-a = 'Hello world'
+a = 'Hallo Python'
 b = a[0]          # 'H'
 c = a[4]          # 'o'
 d = a[-1]         # 'd' (end of string)
@@ -127,7 +127,7 @@ u = s.upper()     # 'HELLO'
 Example: Replacing text.
 
 ```python
-s = 'Hello world'
+s = 'Hallo Python'
 t = s.replace('Hello' , 'Hallo')   # 'Hallo world'
 ```
 
@@ -161,7 +161,7 @@ Strings are "immutable" or read-only.
 Once created, the value can't be changed.
 
 ```python
->>> s = 'Hello World'
+>>> s = 'Hallo Python'
 >>> s[1] = 'a'
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
@@ -188,7 +188,7 @@ same text that would have been produced by the `print()` statement.
 A string of 8-bit bytes, commonly encountered with low-level I/O, is written as follows:
 
 ```python
-data = b'Hello World\r\n'
+data = b'Hallo Python\r\n'
 ```
 
 By putting a little b before the first quotation, you specify that it is a byte string as opposed to a text string.
@@ -451,7 +451,7 @@ of available methods via tab-completion.  For example, try typing
 this:
 
 ```python
->>> s = 'hello world'
+>>> s = 'Hallo Python'
 >>> s.<tab key>
 >>>
 ```
