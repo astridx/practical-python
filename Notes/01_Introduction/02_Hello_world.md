@@ -2,15 +2,13 @@
 
 # 1.2 Ein erstes Programm
 
-This section discusses the creation of your first program, running the
-interpreter, and some basic debugging.
+In diesem Abschnitt erstellst du dein erstes Programms, du lernst den Interpreter und das Debuggen kennen.
 
-### Running Python
+### Python ausführen
 
-Python programs always run inside an interpreter.
+Python-Programme laufen immer in einem Interpreter.
 
-The interpreter is a "console-based" application that normally runs
-from a command shell.
+Der Interpreter ist eine "konsolenbasierte" Anwendung, die über eine Befehlszeile ausgeführt wird.
 
 ```bash
 python3
@@ -20,7 +18,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Erfahrene Programmierer haben normalerweise kein Problem damit, die Befehlszeile zu nutzen. Für Anfänger ist dies oft ein No-Go. Verwendest du eine Umgebung, die eine benutzerfreundlichere Schnittstelle zu Python bietet? Das ist in Ordnung. Trotzdem ist es sinnvoll, sich mit dem Terminal anzufreunden. So schließt du Probleme, die außerhalb von Python begründet sind, schnell aus. Ich lerne aus diesem Grund mit der Befehlszeile.
+Erfahrene Programmierer haben kein Problem damit, die Befehlszeile zu nutzen. Für Anfänger ist dies oft ein No-Go. Verwendest du lieber eine Umgebung, die eine benutzerfreundlichere Schnittstelle zu Python bietet? Das ist in Ordnung. Trotzdem ist es sinnvoll, sich mit dem Terminal anzufreunden. So schließt du Probleme, die außerhalb von Python begründet sind, schnell aus. Ich lerne aus diesem Grund mit der Befehlszeile.
 
 ### Interaktiver Modus{#interaktivermodus}
 
@@ -43,6 +41,7 @@ Hallo Python
 4
 >>>
 ```
+
 Dieser sogenannte [*Direkt-Modus oder REPL*](https://de.wikipedia.org/wiki/Direct_mode)^[https://de.wikipedia.org/wiki/Direct_mode] ist nützlich für das Debuggen und Experimentieren.
 
 > **Was ist REPL?**
@@ -57,13 +56,12 @@ Der Begriff REPL ist eine Abkürzung für *Read, Evaluate, Print and Loop* oder 
 
 Schauen wir uns die Elemente der REPL genauer an:
 
-- `>>>` is the interpreter prompt for starting a new statement.
-- `...` is the interpreter prompt for continuing a statement. Enter a blank line to finish typing and run what you've entered.
+- `>>>` ist die Interpreter-Eingabeaufforderung. Sie erwartet eine Anweisung.
+- `...` ist die Interpreter-Eingabeaufforderung zum Fortsetzen einer Anweisung.
 
-The `...` prompt may or may not be shown depending on your environment. For this course,
-it is shown as blanks to make it easier to cut/paste code samples.
+Die drei Punkte `...` werden nicht in jeder Umgebung angezeigt. In diesem Text ersetzt ich diese mit Leerzeichen. Das hat gleichzeitig den Vorteil, dass Codebeispiele unkompliziert kopiert werden können.
 
-The underscore `_` holds the last result.
+Mit dem Unterstrich `_` greifst du auf das letzte gespeicherte Ergebnis zu.
 
 ```python
 >>> 37 * 42
@@ -75,31 +73,29 @@ The underscore `_` holds the last result.
 >>>
 ```
 
-*This is only true in the interactive mode.* You never use `_` in a program.
+*Das gibt nur im interaktiven Modus*. Nutze den Unterstrich nicht `_` in einem Programm.
 
-### Creating programs
+### Programme erstellen
 
-Programs are put in `.py` files.
+Programme werden in `.py`-Dateien gespeichert.
 
 ```python
 # hello.py
 print('Hallo Python')
 ```
 
-You can create these files with your favorite text editor.
+Erstelle diese Dateien mit dem Texteditor deiner Wahl.
 
-### Running Programs
+### Ausführen von Programmen
 
-To execute a program, run it in the terminal with the `python` command.
-For example, in command-line Unix:
+Um ein Programm auszuführen, führe es mit dem Befehl `python` aus. Zum Beispiel über die Befehlzeile mit `python hello.py`, wenn du dich im gleichen Verzeichnis wie die Datei `hello.py` befindest: 
 
 ```bash
-bash % python hello.py
+python hello.py
 Hallo Python
-bash %
 ```
 
-Or from the Windows shell:
+Oder über die Shell in Windows:
 
 ```
 C:\SomeFolder>hello.py
@@ -109,24 +105,20 @@ C:\SomeFolder>c:\python36\python hello.py
 Hallo Python
 ```
 
-Note: On Windows, you may need to specify a full path to the Python interpreter such as `c:\python36\python`.
-However, if Python is installed in its usual way, you might be able to just type the name of the program
-such as `hello.py`.
+Hinweis: Unter Umständen ist erforderlich, den vollständigen Pfad zum Python-Interpreter anzugeben. Beispielsweise `c:\python36\python`. 
 
-### A Sample Program
+### Ein Beispielprogramm
 
-Let's solve the following problem:
+Lösen wir das folgende Problem:
 
-> One morning, you go out and place a dollar bill on the sidewalk by the Sears tower in Chicago.
-> Each day thereafter, you go out double the number of bills.
-> How long does it take for the stack of bills to exceed the height of the tower?
+> Eines Morgens legst einen Dollarschein auf den Bürgersteig neben dem Sears Tower in Chicago ab. An jedem darauffolgenden Tag verdoppelst du die Anzahl an Scheinen und legst diese dazu. Wie lange dauert es, bis der Geldscheinstapel die Höhe des Turms überschreitet?
 
-Here's a solution:
+Hier ist eine Lösung:
 
 ```python
 # sears.py
-bill_thickness = 0.11 * 0.001 # Meters (0.11 mm)
-sears_height = 442 # Height (meters)
+bill_thickness = 0.11 * 0.001 # Meter (0.11 mm)
+sears_height = 442 # Höhe (Meter)
 num_bills = 1
 day = 1
 
@@ -135,34 +127,33 @@ while num_bills * bill_thickness < sears_height:
     day = day + 1
     num_bills = num_bills * 2
 
-print('Number of days', day)
-print('Number of bills', num_bills)
-print('Final height', num_bills * bill_thickness)
+print('Anzahl der Tage', day)
+print('Anzahl der Geldscheine', num_bills)
+print('Endhöhe', num_bills * bill_thickness)
 ```
 
-When you run it, you get the following output:
+Beim Aufruf siehst du die folgende Ausgabe:
 
 ```bash
-bash % python3 sears.py
+python3 sears.py
 1 1 0.00011
 2 2 0.00022
 3 4 0.00044
 4 8 0.00088
 5 16 0.00176
-6 32 0.00352
 ...
 21 1048576 115.34336
 22 2097152 230.68672
-Number of days 23 
-Number of bills 4194304 
-Final height 461.37344
+Anzahl der Tage 23
+Anzahl der Geldscheine 4194304
+Endhöhe 461.37344
 ```
 
-Using this program as a guide, you can learn a number of important core concepts about Python.
+Lerne anhnad dieses Programms eine Reihe wichtiger Kernkonzepte. 
 
-### Statements
+### Anweisungen
 
-A python program is a sequence of statements:
+Ein Python-Programm ist eine Folge von Anweisungen:
 
 ```python
 a = 3 + 4
